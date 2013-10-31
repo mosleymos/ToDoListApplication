@@ -1,0 +1,22 @@
+<h4>La liste des taches</h4>
+
+<form action="/" method ="post">
+	<input type="text" name="text">
+	<input type="submit" value="ajout">
+</form>
+<ul>
+	<% for todo in @todos %>
+
+		   <% if todo.status == 0 %>
+			<li style="text-decoration: line-through" > <%= todo.text %> </li>
+			<% else %>
+			<li> <%=  todo.text %> </li>
+			<% end %>
+
+			 
+			 <a href="/todo/<%= todo.id%>"> <i class="icon-fontawesome-webfont"> </i> |</a>
+			 <a href="/todo/<%= todo.id%>/delete"> <i class="icon-fontawesome-webfont-1">|</i> </a> 
+			 <a href="/todo/<%= todo.id%>/finish"> <i class="icon-fontawesome-webfont-2"> </i> </a> 
+
+	<% end %>
+</ul>

@@ -1,0 +1,4 @@
+<form action ="/todo/<%= @todo.id %>" method ="post">
+	<input type="hidden" name="_method" value="delete">
+	<h3>Voulez-vous vraiment supprimer cette tache : <%= @todo.text %> </h3>  <input type="submit" value="Supprimer"> <a href="/"> Annuler</a>
+</form>

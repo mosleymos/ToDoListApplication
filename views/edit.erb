@@ -1,0 +1,7 @@
+	
+<form method="post" action="/todo/<%= @todo.id %>"> 
+
+    <input type="hidden" name="_method" value="put">
+    <input type="text" name ="text" value="<%= @todo.text %>">
+   <input type="submit" value="Modifier">
+</form>
