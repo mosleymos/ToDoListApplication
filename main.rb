@@ -1,13 +1,12 @@
-require 'rubygems'
 require 'sinatra'
-require 'sinatra/activerecord/rake'
+require "sinatra/activerecord"
 
 # Pour la base de données
 
-require "sinatra/activerecord"
 require "sqlite3"
 require "rake"
-set :database, "sqlite3:///todoapp.sqlite3"
+
+set :database, { adapter:"sqlite3", database:"db/todoapp.sqlite3"}
 
 class Todo < ActiveRecord::Base
 
